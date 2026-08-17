@@ -9,17 +9,24 @@
         header { background: linear-gradient(135deg, #0056b3, #FFD700); color: white; padding: 30px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 2em; }
         .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        /* MÊME GRILLE POUR LES 2 SECTIONS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        
+        /* MÊME CARTE POUR LES 2 SECTIONS */
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
         .card img { width: 100%; height: 200px; object-fit: cover; }
         .card-body { padding: 15px; }
         .card-body h3 { color: #0056b3; margin-top: 0; }
+        .card-body p { margin: 8px 0; }
+        
         .prix { font-size: 1.3em; color: #FFD700; font-weight: bold; }
-        .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+        .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: bold; }
         .commander:hover { background: #003d80; }
-        .galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px; }
-        .galerie img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-        .section-titre { text-align: center; color: #0056b3; font-size: 2em; margin-top: 40px; }
+        
+        .section-titre { text-align: center; color: #0056b3; font-size: 2em; margin-top: 50px; margin-bottom: 10px; }
+        .section-desc { text-align: center; margin-bottom: 30px; color: #555; }
         footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 30px; }
     </style>
 </head>
@@ -30,8 +37,8 @@
     </header>
     
     <div class="container">
-        <h2>Nos Services</h2>
-        <div class="services">
+        <h2 class="section-titre">Nos Services</h2>
+        <div class="grid">
             
             <div class="card">
                 <img src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg" alt="Kit Solaire">
@@ -66,14 +73,34 @@
         </div>
     </div>
 
-        <div class="container">
+    <div class="container">
         <h2 class="section-titre">⚡ Nos Réalisations ⚡</h2>
-        <p style="text-align:center;">Quelques projets réalisés à Kinshasa et environs</p>
+        <p class="section-desc">Quelques projets réalisés à Kinshasa et environs</p>
         
-        <div class="galerie">
-            <img src="https://i.imgur.com/XBE9vph.jpeg" alt="Installation Kit Solaire 5KVA">
-            <img src="https://i.imgur.com/ASt8Xl3.jpeg" alt="Tableau Électrique Résidentiel">
-            <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg" alt="Pompe Solaire Agricole Bateke">
+        <div class="grid">
+            <div class="card">
+                <img src="https://i.imgur.com/XBE9vph.jpeg" alt="Installation Kit Solaire 5KVA">
+                <div class="card-body">
+                    <h3>Installation 5KVA</h3>
+                    <p>Maison résidentielle - Gombe</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://i.imgur.com/ASt8Xl3.jpeg" alt="Tableau Électrique Résidentiel">
+                <div class="card-body">
+                    <h3>Tableau Électrique</h3>
+                    <p>Mise aux normes + Disjoncteurs - Limete</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg" alt="Pompe Solaire Agricole Bateke">
+                <div class="card-body">
+                    <h3>Pompe Solaire</h3>
+                    <p>Irrigation 2 hectares - Bateke</p>
+                </div>
+            </div>
         </div>
     </div>
     
