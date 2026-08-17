@@ -8,26 +8,28 @@
         body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: linear-gradient(135deg, #0056b3, #FFD700); color: white; padding: 30px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 2em; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
         
-        /* MÊME GRILLE POUR LES 2 SECTIONS */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; } /* Moins de marge haut/bas */
+        .container + .container { padding-top: 20px; } /* Resserre entre 2 sections */
+        
+        .section-header { border-left: 5px solid #FFD700; padding-left: 15px; margin-bottom: 25px; }
+        .section-header h2 { margin: 0; color: #0056b3; font-size: 1.8em; } /* Titre à gauche */
+        .section-header p { margin: 5px 0 0; color: #555; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         
-        /* MÊME CARTE POUR LES 2 SECTIONS */
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-5px); }
         .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 15px; }
-        .card-body h3 { color: #0056b3; margin-top: 0; }
+        .card-body { padding: 15px; flex-grow: 1; } /* Pour que tous les boutons s'alignent */
+        .card-body h3 { color: #0056b3; margin-top: 0; margin-bottom: 8px; }
         .card-body p { margin: 8px 0; }
         
         .prix { font-size: 1.3em; color: #FFD700; font-weight: bold; }
-        .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: bold; }
+        .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 0 0 10px 10px; margin-top: auto; font-weight: bold; } /* Bande bleue en bas */
         .commander:hover { background: #003d80; }
         
-        .section-titre { text-align: center; color: #0056b3; font-size: 2em; margin-top: 50px; margin-bottom: 10px; }
-        .section-desc { text-align: center; margin-bottom: 30px; color: #555; }
-        footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 30px; }
+        footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -37,7 +39,10 @@
     </header>
     
     <div class="container">
-        <h2 class="section-titre">Nos Services</h2>
+        <div class="section-header">
+            <h2>Nos Services</h2>
+            <p>Des solutions fiables et durables pour votre énergie</p>
+        </div>
         <div class="grid">
             
             <div class="card">
@@ -46,8 +51,8 @@
                     <h3>Kit Solaire Maison</h3>
                     <p>TV + 4 Ampoules + Charge téléphone. Autonomie 8h</p>
                     <p class="prix">À partir de 650 $</p>
-                    <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20devis%20Kit%20Solaire%20Maison" class="commander">Demander Devis WhatsApp</a>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20devis%20Kit%20Solaire%20Maison" class="commander">Commander Votre Devis</a>
             </div>
             
             <div class="card">
@@ -56,8 +61,8 @@
                     <h3>Installation Électrique</h3>
                     <p>Maison, Bureau, Boutique. Normes + Mise à la terre</p>
                     <p class="prix">Sur Devis</p>
-                    <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20installation%20electrique" class="commander">Demander Devis WhatsApp</a>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20installation%20electrique" class="commander">Commander Votre Devis</a>
             </div>
             
             <div class="card">
@@ -66,17 +71,18 @@
                     <h3>Pompe Solaire Agricole</h3>
                     <p>Pour arroser vos champs à Bateke. Sans carburant</p>
                     <p class="prix">À partir de 1200 $</p>
-                    <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20Pompe%20Solaire" class="commander">Demander Devis WhatsApp</a>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20Pompe%20Solaire" class="commander">Commander Votre Devis</a>
             </div>
             
         </div>
     </div>
 
     <div class="container">
-        <h2 class="section-titre">⚡ Nos Réalisations ⚡</h2>
-        <p class="section-desc">Quelques projets réalisés à Kinshasa et environs</p>
-        
+        <div class="section-header">
+            <h2>⚡ Nos Réalisations</h2>
+            <p>Quelques projets réalisés à Kinshasa et environs</p>
+        </div>
         <div class="grid">
             <div class="card">
                 <img src="https://i.imgur.com/XBE9vph.jpeg" alt="Installation Kit Solaire 5KVA">
@@ -84,6 +90,7 @@
                     <h3>Installation 5KVA</h3>
                     <p>Maison résidentielle - Gombe</p>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20le%20meme%20type%20d'installation%205KVA" class="commander">Commander Votre Devis</a>
             </div>
             
             <div class="card">
@@ -92,6 +99,7 @@
                     <h3>Tableau Électrique</h3>
                     <p>Mise aux normes + Disjoncteurs - Limete</p>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20devis%20Tableau%20Electrique" class="commander">Commander Votre Devis</a>
             </div>
             
             <div class="card">
@@ -100,6 +108,7 @@
                     <h3>Pompe Solaire</h3>
                     <p>Irrigation 2 hectares - Bateke</p>
                 </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20Pompe%20Solaire%20Agricole" class="commander">Commander Votre Devis</a>
             </div>
         </div>
     </div>
