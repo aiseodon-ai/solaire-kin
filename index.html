@@ -28,6 +28,11 @@
         .prix { font-size: 1.3em; color: #FFD700; font-weight: bold; }
         .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 0 0 10px 10px; margin-top: auto; font-weight: bold; } /* Bande bleue en bas */
         .commander:hover { background: #003d80; }
+
+        .contact { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; }
+        .contact input, .contact textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; box-sizing: border-box; }
+        .contact button { width: 100%; padding: 15px; background: #FFD700; color: #0056b3; border: none; border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; }
+        .contact button:hover { background: #e6c200; }
         
         footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 20px; }
     </style>
@@ -112,7 +117,21 @@
             </div>
         </div>
     </div>
-    
+
+        <div class="container">
+        <div class="section-header">
+            <h2>Demande de Devis Gratuit</h2>
+            <p>Remplissez ce formulaire et nous vous répondons sous 2h</p>
+        </div>
+        
+        <form class="contact" action="https://formspree.io/f/mwlerdde" method="POST">
+            <input type="text" name="Nom" placeholder="Votre Nom Complet" required>
+            <input type="tel" name="WhatsApp" placeholder="Votre Numéro WhatsApp" required>
+            <input type="text" name="Lieu" placeholder="Votre Quartier à Kinshasa">
+            <textarea name="Projet" rows="4" placeholder="Décrivez votre projet: Kit Solaire, Installation, Pompe..." required></textarea>
+            <button type="submit">Envoyer la Demande</button>
+        </form>
+    </div>
     <footer>
         <p>© 2026 Solaire Kin | WhatsApp: +243 816 640 963</p>
     </footer>
