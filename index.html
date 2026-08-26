@@ -27,6 +27,7 @@
         .contact input, .contact textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; box-sizing: border-box; }
         .contact button { width: 100%; padding: 15px; background: #FFD700; color: #0056b3; border: none; border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; }
         .contact button:hover { background: #e6c200; }
+        .contact button:disabled { background: #ccc; cursor: not-allowed; }
         footer { text-align: center; padding: 30px 20px; background: #1a1a1a; color: white; margin-top: 30px; line-height: 1.6; }
         footer a { color: #FFD700; text-decoration: none; font-weight: bold; }
         footer a:hover { text-decoration: underline; }
@@ -112,18 +113,71 @@
             <h2>Demande de Devis Gratuit</h2>
             <p>Remplissez ce formulaire et nous vous répondons sous 2h</p>
         </div>
-        <form class="contact" action="https://formspree.io/f/mwlerdde" method="POST">
+        <form class="contact" id="devisForm" action="https://formspree.io/f/mwlerdde" method="POST">
             <input type="text" name="Nom" placeholder="Votre Nom Complet" required>
             <input type="tel" name="WhatsApp" placeholder="Votre Numéro WhatsApp" required>
             <input type="text" name="Lieu" placeholder="Votre Quartier à Kinshasa">
             <textarea name="Projet" rows="4" placeholder="Décrivez votre projet: Kit Solaire, Installation, Pompe..." required></textarea>
-            <button type="submit">Envoyer la Demande</button>
+            
+            <p id="formMessage" style="display:none; text-align:center; padding:12px; border-radius:5px; font-weight:bold; margin-bottom:15px;"></p>
+            
+            <button type="submit" id="submitBtn">Envoyer la Demande</button>
         </form>
     </div>
 
-       <footer>
+    <footer>
         <p style="font-size: 1.2em; margin:0;">⚡ <strong>MWANGAZA POWER</strong> ⚡</p>
-        <p style="margin:5px 0;"><a href="https://mwangazapower.com" style="color:#FFD700; text-decoration:none; font-weight:bold;">www.mwangazapower.com</a></p>
+        <p style="margin:5px 0;"><a href="https://mwangazapower.com">www.mwangazapower.com</a></p>
         <p style="margin:5px 0;">📧 contact@mwangazapower.com | 📱 WhatsApp: +243 816 640 963</p>
         <p style="margin:10px 0 0; font-size:0.9em; opacity:0.8;">Installation Solaire et Électrique - Kinshasa © 2026</p>
     </footer>
+
+    <script>
+    const form = document.getElementById('devisForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        submitBtn.textContent = 'Envoi en cours...';
+        submitBtn.disabled = true;
+
+        const data = new FormData(form);
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                formMessage.style.display = 'block';
+                formMessage.style.background = '#d4edda';
+                formMessage.style.color = '#155724';
+                formMessage.style.border = '1px solid #c3e6cb';
+                formMessage.textContent = '✅ Merci ! Votre demande a été envoyée. Nous vous répondons sous 2h sur WhatsApp.';
+                
+                form.reset();
+
+            } else {
+                formMessage.style.display = 'block';
+                formMessage.style.background = '#f8d7da';
+                formMessage.style.color = '#721c24';
+                formMessage.textContent = '❌ Erreur. Réessayez svp.';
+            }
+        } catch (error) {
+            formMessage.style.display = 'block';
+            formMessage.style.background = '#f8d7da';
+            formMessage.style.color = '#721c24';
+            formMessage.textContent = '❌ Erreur réseau. Vérifiez votre connexion.';
+        }
+
+        submitBtn.textContent = 'Envoyer la Demande';
+        submitBtn.disabled = false;
+        setTimeout(() => { formMessage.style.display = 'none'; }, 7000);
+    });
+    </script>
+
+</body>
+</html>
