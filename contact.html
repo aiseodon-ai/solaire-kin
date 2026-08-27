@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis Gratuit - Mwangaza Power</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: linear-gradient(135deg, #0056b3, #FFD700); color: white; padding: 30px 20px; text-align: center; }
+        nav { background:#1a1a1a; padding:15px; text-align:center; position:sticky; top:0; z-index:1000; }
+        nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold; }
+        nav a.active, nav a:hover { color:#FFD700; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .contact-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+        @media(max-width:800px){ .contact-wrapper{ grid-template-columns:1fr; } }
+        .card { background:white; padding:30px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color:#0056b3; border-left:5px solid #FFD700; padding-left:15px; margin-top:0; }
+        input, textarea, select { width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:5px; font-size:1em; box-sizing:border-box; }
+        button { width:100%; padding:16px; background:#FFD700; color:#0056b3; border:none; border-radius:5px; font-size:1.1em; font-weight:bold; cursor:pointer; }
+        button:hover { background:#e6c200; }
+        button:disabled { background:#ccc; }
+        .info-item { margin:15px 0; line-height:1.6; }
+        .info-item strong { color:#0056b3; }
+        .whatsapp-big { display:block; background:#25D366; color:white; text-align:center; padding:16px; border-radius:5px; text-decoration:none; font-weight:bold; font-size:1.2em; margin:20px 0; }
+        .whatsapp-big:hover { background:#1ebe5b; }
+        footer { text-align: center; padding: 30px 20px; background: #1a1a1a; color: white; margin-top: 30px; }
+        footer a { color: #FFD700; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header><h1>⚡MWANGAZA POWER⚡</h1><p>Devis Gratuit en 2h - Kinshasa</p></header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services & Prix</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+        <a href="contact.html" class="active">Devis</a>
+    </nav>
+
+    <div class="container">
+        <div class="contact-wrapper">
+            
+            <div class="card">
+                <h2>Demande de Devis</h2>
+                <p>Remplissez et on vous répond sur WhatsApp sous 2h</p>
+                <form id="devisForm" action="https://formspree.io/f/mwlerdde" method="POST">
+                    <input type="text" name="Nom" placeholder="Nom complet *" required>
+                    <input type="tel" name="WhatsApp" placeholder="Numéro WhatsApp *" required>
+                    <select name="Service" required>
+                        <option value="">-- Choisissez votre besoin --</option>
+                        <option>Kit Solaire Eco 650$</option>
+                        <option>Kit Famille 1250$</option>
+                        <option>Kit Pro 3KVA 2800$</option>
+                        <option>Installation Électrique Maison</option>
+                        <option>Entretien / Nettoyage Panneau 45$</option>
+                        <option>Pompe Solaire Agricole</option>
+                        <option>Autre (expliquer ci-dessous)</option>
+                    </select>
+                    <input type="text" name="Quartier" placeholder="Votre Quartier à Kinshasa (ex: Limete, Ngiringiri)">
+                    <textarea name="Projet" rows="5" placeholder="Décrivez votre projet : combien de pièces, TV, frigo, etc... *" required></textarea>
+                    <p id="formMessage" style="display:none; text-align:center; padding:12px; border-radius:5px; font-weight:bold; margin-bottom:15px;"></p>
+                    <button type="submit" id="submitBtn">Envoyer ma Demande 🚀</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Contact Direct</h2>
+                <a href="https://wa.me/243816640963?text=Bonjour%20Mwangaza%20Power%2C%20je%20veux%20un%20devis" class="whatsapp-big">💬 WhatsApp Direct : +243 816 640 963</a>
+                
+                <div class="info-item"><strong>📍 Adresse :</strong><br>Kinshasa - Ngiringiri / Limete<br>Intervention dans toute la ville</div>
+                <div class="info-item"><strong>📧 Email :</strong><br>contact@mwangazapower.com</div>
+                <div class="info-item"><strong>🕘 Horaires :</strong><br>Lun - Sam : 8h - 18h<br>Dim : Sur RDV WhatsApp</div>
+                <div class="info-item"><strong>⚡ Délai :</strong><br>Devis sous 2h<br>Installation sous 48h après accord</div>
+
+                <h2 style="margin-top:30px;">Où nous trouver ?</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.904...!2d15.266!3d-4.325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a313a!2sKinshasa!5e0!3m2!1sfr!2scd!4v1" width="100%" height="250" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+                <p style="font-size:0.85em; color:#666; margin-top:10px;">On se déplace chez vous pour le devis gratuit à Kinshasa.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer><p>⚡ <strong>MWANGAZA POWER</strong> ⚡ - www.mwangazapower.com | +243 816 640 963</p><p>© 2026 - Installation Solaire et Électrique Kinshasa</p></footer>
+
+    <script>
+    const form=document.getElementById('devisForm');const msg=document.getElementById('formMessage');const btn=document.getElementById('submitBtn');
+    form.addEventListener('submit', async function(e){e.preventDefault();btn.textContent='Envoi en cours...';btn.disabled=true;try{const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(r.ok){msg.style.display='block';msg.style.background='#d4edda';msg.style.color='#155724';msg.textContent='✅ Merci ! Demande envoyée. On vous répond sur WhatsApp sous 2h.';form.reset();}else{msg.style.display='block';msg.style.background='#f8d7da';msg.style.color='#721c24';msg.textContent='❌ Erreur, réessayez svp.';}}catch{msg.style.display='block';msg.style.background='#f8d7da';msg.style.color='#721c24';msg.textContent='❌ Erreur réseau.';}btn.textContent='Envoyer ma Demande 🚀';btn.disabled=false;setTimeout(()=>msg.style.display='none',8000);});
+    </script>
+</body>
+</html>
