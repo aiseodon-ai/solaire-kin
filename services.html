@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Prix - Mwangaza Power Kinshasa</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: linear-gradient(135deg, #0056b3, #FFD700); color: white; padding: 30px 20px; text-align: center; }
+        nav { background:#1a1a1a; padding:15px; text-align:center; position:sticky; top:0; z-index:1000; }
+        nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold; font-size:0.95em; }
+        nav a.active, nav a:hover { color:#FFD700; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section-header { border-left: 5px solid #FFD700; padding-left: 15px; margin-bottom: 25px; }
+        .section-header h2 { margin: 0; color: #0056b3; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display:flex; flex-direction:column; border:1px solid #eee; }
+        .card.populaire { border:2px solid #FFD700; transform:scale(1.02); }
+        .badge { background:#FFD700; color:#0056b3; text-align:center; padding:6px; font-weight:bold; font-size:0.9em; }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 20px; flex-grow:1; }
+        .card-body h3 { color: #0056b3; margin:0 0 10px; }
+        .card-body ul { padding-left:18px; margin:10px 0; color:#333; line-height:1.6; }
+        .prix { font-size: 1.6em; color: #0056b3; font-weight: bold; margin:15px 0 5px; }
+        .prix span { font-size:0.6em; color:#666; font-weight:normal; }
+        .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; margin-top:auto; }
+        .commander.gold { background:#FFD700; color:#0056b3; }
+        .commander:hover { opacity:0.9; }
+        footer { text-align: center; padding: 30px 20px; background: #1a1a1a; color: white; margin-top: 30px; }
+        footer a { color: #FFD700; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header><h1>⚡MWANGAZA POWER⚡</h1><p>Nos Services & Tarifs - Kinshasa</p></header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html" class="active">Services & Prix</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+        <a href="contact.html">Devis</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-header"><h2>☀️ Kits Solaires Maison</h2><p>Finis les délestages SNEL</p></div>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://i.imgur.com/ra53UiY.jpeg" alt="Kit Solaire">
+                <div class="card-body">
+                    <h3>Kit Éco - 650 $</h3>
+                    <ul>
+                        <li>✅ 1 Panneau 300W + Batterie 100Ah</li>
+                        <li>✅ TV + 4 Ampoules LED + 2 Charges tel</li>
+                        <li>✅ Autonomie 6-8h / jour</li>
+                        <li>✅ Idéal pour chambre / petit salon</li>
+                    </ul>
+                    <p class="prix">650 $ <span>Installation incluse</span></p>
+                </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20le%20Kit%20Eco%20650%24" class="commander">Commander ce Kit</a>
+            </div>
+
+            <div class="card populaire">
+                <div class="badge">⭐ LE PLUS DEMANDÉ</div>
+                <img src="https://i.imgur.com/oAT7Ug7.jpeg" alt="Kit Famille">
+                <div class="card-body">
+                    <h3>Kit Famille - 1 250 $</h3>
+                    <ul>
+                        <li>✅ 2 Panneaux 400W + Batterie Lithium 200Ah</li>
+                        <li>✅ TV, Ventilo, 6 Ampoules, Frigo petit</li>
+                        <li>✅ Autonomie 10-12h / jour</li>
+                        <li>✅ Pour maison 2-3 pièces</li>
+                    </ul>
+                    <p class="prix">1 250 $ <span>Installation incluse</span></p>
+                </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20le%20Kit%20Famille%201250%24" class="commander gold">Commander ce Kit</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg" alt="Kit Pro">
+                <div class="card-body">
+                    <h3>Kit Pro 3KVA - 2 800 $</h3>
+                    <ul>
+                        <li>✅ Onduleur Hybride 3KVA + 4 Panneaux</li>
+                        <li>✅ Toute la maison sauf clim</li>
+                        <li>✅ Congélateur + Pompe + Lumières</li>
+                        <li>✅ Idéal Bureau / Boutique / Flat</li>
+                    </ul>
+                    <p class="prix">2 800 $ <span>Sur devis selon distance</span></p>
+                </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20le%20Kit%20Pro%203KVA" class="commander">Demander Devis Pro</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-header"><h2>⚡ Autres Services</h2></div>
+        <div class="grid">
+            <div class="card">
+                <img src="https://i.imgur.com/83EcRk5.jpeg">
+                <div class="card-body">
+                    <h3>Installation Électrique Bâtiment</h3>
+                    <p>Normes, mise à la terre, tableau disjoncteur, test complet. Pour construction neuve ou rénovation.</p>
+                    <p class="prix">Sur Devis <span>Visite gratuite à Kinshasa</span></p>
+                </div>
+                <a href="contact.html" class="commander">Demander Devis Élec</a>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/oaNFH9n.jpeg">
+                <div class="card-body">
+                    <h3>Entretien & Nettoyage Panneau</h3>
+                    <p>La poussière de Kinshasa fait perdre 30% de rendement. On nettoie + vérifie les câbles et batteries.</p>
+                    <p class="prix">À partir de 45 $ <span>/ intervention</span></p>
+                </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20nettoyage%20de%20panneaux" class="commander">Réserver Nettoyage</a>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/TgaGqxX.jpeg">
+                <div class="card-body">
+                    <h3>Pompe Solaire Agricole</h3>
+                    <p>Pour Bateke, Maluku. Arrosez vos champs sans carburant ni SNEL. 1 à 5 hectares.</p>
+                    <p class="prix">À partir de 1 200 $ <span>Étude terrain incluse</span></p>
+                </div>
+                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20pompe%20solaire%20agricole" class="commander">Devis Pompe Solaire</a>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>⚡ <strong>MWANGAZA POWER</strong> ⚡</p><p>www.mwangazapower.com | +243 816 640 963</p></footer>
+</body>
+</html>
