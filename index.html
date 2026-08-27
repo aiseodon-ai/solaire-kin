@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mwangaza Power - Installation Solaire et Électrique Kinshasa</title>
+    <title>Mwangaza Power - Installation Solaire Kinshasa</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: linear-gradient(135deg, #0056b3, #FFD700); color: white; padding: 30px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 2em; }
+        nav { background:#1a1a1a; padding:15px; text-align:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.3); }
+        nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold; font-size:0.95em; }
+        nav a.active, nav a:hover { color:#FFD700; }
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        .container + .container { padding-top: 20px; }
         .section-header { border-left: 5px solid #FFD700; padding-left: 15px; margin-bottom: 25px; }
         .section-header h2 { margin: 0; color: #0056b3; font-size: 1.8em; }
-        .section-header p { margin: 5px 0 0; color: #555; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-5px); }
         .card img { width: 100%; height: 200px; object-fit: cover; }
         .card-body { padding: 15px; flex-grow: 1; }
-        .card-body h3 { color: #0056b3; margin-top: 0; margin-bottom: 8px; }
-        .card-body p { margin: 8px 0; }
-        .prix { font-size: 1.3em; color: #FFD700; font-weight: bold; }
+        .prix { font-size: 1.3em; color: #0056b3; font-weight: bold; }
         .commander { display: block; background: #0056b3; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 0 0 10px 10px; margin-top: auto; font-weight: bold; }
-        .commander:hover { background: #003d80; }
         .contact { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; }
-        .contact input, .contact textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; box-sizing: border-box; }
-        .contact button { width: 100%; padding: 15px; background: #FFD700; color: #0056b3; border: none; border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; }
-        .contact button:hover { background: #e6c200; }
-        .contact button:disabled { background: #ccc; cursor: not-allowed; }
+        .contact input, .contact textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .contact button { width: 100%; padding: 15px; background: #FFD700; color: #0056b3; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
         footer { text-align: center; padding: 30px 20px; background: #1a1a1a; color: white; margin-top: 30px; line-height: 1.6; }
-        footer a { color: #FFD700; text-decoration: none; font-weight: bold; }
-        footer a:hover { text-decoration: underline; }
+        footer a { color: #FFD700; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -38,146 +33,49 @@
         <h1>⚡MWANGAZA POWER⚡</h1>
         <p>Installation Solaire et Électrique - Kinshasa</p>
     </header>
+        <nav>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="services.html">Services & Prix</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+        <a href="contact.html">Devis</a>
+    </nav>
     
     <div class="container">
-        <div class="section-header">
-            <h2>⚡Nos Services</h2>
-            <p>Des solutions fiables et durables pour votre énergie</p>
-        </div>
+        <div class="section-header"><h2>⚡Nos Services</h2><p>Nos 3 services les plus demandés</p></div>
         <div class="grid">
-            <div class="card">
-                <img src="https://i.imgur.com/ra53UiY.jpeg" alt="Kit Solaire">
-                <div class="card-body">
-                    <h3>Kit Solaire Maison</h3>
-                    <p>TV + 4 Ampoules + Charge téléphone. Autonomie 8h</p>
-                    <p class="prix">À partir de 650 $</p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20devis%20Kit%20Solaire%20Maison" class="commander">Commander Votre Devis</a>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/83EcRk5.jpeg" alt="Installation Électrique">
-                <div class="card-body">
-                    <h3>Installation Électrique</h3>
-                    <p>Maison, Bureau, Boutique. Normes + Mise à la terre</p>
-                    <p class="prix">Sur Devis</p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20installation%20electrique" class="commander">Commander Votre Devis</a>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/oaNFH9n.jpeg" alt="Entrentien et netoyage de panneau">
-                <div class="card-body">
-                    <h3>Entrentien et netoyage de panneau</h3>
-                    <p>Pour maintenir la performence de votre systeme</p>
-                    <p class="prix">À partir de 45 $</p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20Pompe%20Solaire" class="commander">Commander Votre Devis</a>
-            </div>
+            <div class="card"><img src="https://i.imgur.com/ra53UiY.jpeg"><div class="card-body"><h3>Kit Solaire Maison</h3><p>TV + 4 Ampoules + Charge téléphone</p><p class="prix">À partir de 650 $</p></div><a href="services.html" class="commander">Voir les détails</a></div>
+            <div class="card"><img src="https://i.imgur.com/83EcRk5.jpeg"><div class="card-body"><h3>Installation Électrique</h3><p>Maison, Bureau, Boutique. Normes</p><p class="prix">Sur Devis</p></div><a href="services.html" class="commander">Voir les détails</a></div>
+            <div class="card"><img src="https://i.imgur.com/oaNFH9n.jpeg"><div class="card-body"><h3>Entretien Panneau</h3><p>Pour maintenir la performance</p><p class="prix">À partir de 45 $</p></div><a href="services.html" class="commander">Voir les détails</a></div>
         </div>
     </div>
 
     <div class="container">
-        <div class="section-header">
-            <h2>⚡ Nos Réalisations</h2>
-            <p>Quelques projets réalisés à Kinshasa et environs</p>
-        </div>
+        <div class="section-header"><h2>⚡ Nos Réalisations</h2><p>Aperçu de nos chantiers</p></div>
         <div class="grid">
-            <div class="card">
-                <img src="https://i.imgur.com/oAT7Ug7.jpeg" alt="Installation Kit Solaire 11KVA">
-                <div class="card-body">
-                    <h3>Installation 11KVA</h3>
-                    <p>Flat hotel + salle de fette - Ngiringiri</p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20le%20meme%20type%20d'installation%205KVA" class="commander">Commander Votre Devis</a>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/ASt8Xl3.jpeg" alt="Tableau Électrique Résidentiel">
-                <div class="card-body">
-                    <h3>Tableau Électrique</h3>
-                    <p>Mise aux normes + Disjoncteurs - Limete</p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20un%20devis%20Tableau%20Electrique" class="commander">Commander Votre Devis</a>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/TgaGqxX.jpeg" alt="Pompe Solaire Agricole Bateke">
-                <div class="card-body">
-                    <h3>Boite de nuit avec energie solaire</h3>
-                    <p>Kinshasa </p>
-                </div>
-                <a href="https://wa.me/243816640963?text=Bonjour%20je%20veux%20une%20Pompe%20Solaire%20Agricole" class="commander">Commander Votre Devis</a>
-            </div>
+            <div class="card"><img src="https://i.imgur.com/oAT7Ug7.jpeg"><div class="card-body"><h3>Installation 11KVA - Ngiringiri</h3></div><a href="realisations.html" class="commander">Voir toutes nos réalisations</a></div>
+            <div class="card"><img src="https://i.imgur.com/ASt8Xl3.jpeg"><div class="card-body"><h3>Tableau Électrique - Limete</h3></div><a href="realisations.html" class="commander">Voir toutes nos réalisations</a></div>
+            <div class="card"><img src="https://i.imgur.com/TgaGqxX.jpeg"><div class="card-body"><h3>Boite de nuit solaire - Kinshasa</h3></div><a href="realisations.html" class="commander">Voir toutes nos réalisations</a></div>
         </div>
     </div>
 
     <div class="container">
-        <div class="section-header">
-            <h2>Demande de Devis Gratuit</h2>
-            <p>Remplissez ce formulaire et nous vous répondons sous 2h</p>
-        </div>
+        <div class="section-header"><h2>Demande de Devis Gratuit</h2><p>Réponse sous 2h</p></div>
         <form class="contact" id="devisForm" action="https://formspree.io/f/mwlerdde" method="POST">
             <input type="text" name="Nom" placeholder="Votre Nom Complet" required>
             <input type="tel" name="WhatsApp" placeholder="Votre Numéro WhatsApp" required>
             <input type="text" name="Lieu" placeholder="Votre Quartier à Kinshasa">
-            <textarea name="Projet" rows="4" placeholder="Décrivez votre projet: Kit Solaire, Installation, Pompe..." required></textarea>
-            
+            <textarea name="Projet" rows="4" placeholder="Décrivez votre projet..." required></textarea>
             <p id="formMessage" style="display:none; text-align:center; padding:12px; border-radius:5px; font-weight:bold; margin-bottom:15px;"></p>
-            
             <button type="submit" id="submitBtn">Envoyer la Demande</button>
         </form>
     </div>
 
-    <footer>
-        <p style="font-size: 1.2em; margin:0;">⚡ <strong>MWANGAZA POWER</strong> ⚡</p>
-        <p style="margin:5px 0;"><a href="https://mwangazapower.com">www.mwangazapower.com</a></p>
-        <p style="margin:5px 0;">📧 contact@mwangazapower.com | 📱 WhatsApp: +243 816 640 963</p>
-        <p style="margin:10px 0 0; font-size:0.9em; opacity:0.8;">Installation Solaire et Électrique - Kinshasa © 2026</p>
-    </footer>
-
+    <footer><p>⚡ <strong>MWANGAZA POWER</strong> ⚡</p><p><a href="https://mwangazapower.com">www.mwangazapower.com</a></p><p>📧 contact@mwangazapower.com | 📱 +243 816 640 963</p><p>© 2026 - Kinshasa</p></footer>
+    
     <script>
-    const form = document.getElementById('devisForm');
-    const formMessage = document.getElementById('formMessage');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        submitBtn.textContent = 'Envoi en cours...';
-        submitBtn.disabled = true;
-
-        const data = new FormData(form);
-        
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                formMessage.style.display = 'block';
-                formMessage.style.background = '#d4edda';
-                formMessage.style.color = '#155724';
-                formMessage.style.border = '1px solid #c3e6cb';
-                formMessage.textContent = '✅ Merci ! Votre demande a été envoyée. Nous vous répondons sous 2h sur WhatsApp.';
-                
-                form.reset();
-
-            } else {
-                formMessage.style.display = 'block';
-                formMessage.style.background = '#f8d7da';
-                formMessage.style.color = '#721c24';
-                formMessage.textContent = '❌ Erreur. Réessayez svp.';
-            }
-        } catch (error) {
-            formMessage.style.display = 'block';
-            formMessage.style.background = '#f8d7da';
-            formMessage.style.color = '#721c24';
-            formMessage.textContent = '❌ Erreur réseau. Vérifiez votre connexion.';
-        }
-
-        submitBtn.textContent = 'Envoyer la Demande';
-        submitBtn.disabled = false;
-        setTimeout(() => { formMessage.style.display = 'none'; }, 7000);
-    });
+    const form=document.getElementById('devisForm');const msg=document.getElementById('formMessage');const btn=document.getElementById('submitBtn');
+    form.addEventListener('submit', async function(e){e.preventDefault();btn.textContent='Envoi en cours...';btn.disabled=true;try{const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(r.ok){msg.style.display='block';msg.style.background='#d4edda';msg.style.color='#155724';msg.textContent='✅ Merci ! Demande envoyée. On vous répond sous 2h.';form.reset();}else{msg.style.display='block';msg.style.background='#f8d7da';msg.style.color='#721c24';msg.textContent='❌ Erreur, réessayez.';}}catch{msg.style.display='block';msg.style.background='#f8d7da';msg.style.color='#721c24';msg.textContent='❌ Erreur réseau.';}btn.textContent='Envoyer la Demande';btn.disabled=false;setTimeout(()=>msg.style.display='none',7000);});
     </script>
-
 </body>
 </html>
